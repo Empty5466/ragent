@@ -29,7 +29,7 @@ spring:
   data:
     redis:
       host: 127.0.0.1
-      port: 6379
+      port: 6380 # 专用 Redis 容器 ragent-redis（宿主机 6380 -> 容器 6379），与已有 demo-redis(6379) 隔离
       password: 123456
 
 ragent:
