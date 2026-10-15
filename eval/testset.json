@@ -1,0 +1,26 @@
+{
+  "version": "campus-eval-v1",
+  "description": "校园服务域端到端评测集：kb=知识库检索题(doc+关键词), tool=意图工具路由题, negative=不应触发校园工具题",
+  "cases": [
+    { "id": "lib-01", "type": "kb", "question": "书没看完怎么续借？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["续借"] },
+    { "id": "lib-02", "type": "kb", "question": "本科生一次最多能借几本书？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["10"] },
+    { "id": "lib-03", "type": "kb", "question": "图书超期了会怎么处理？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["停借"] },
+    { "id": "lib-04", "type": "kb", "question": "图书馆的书丢了怎么赔偿？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["赔偿"] },
+    { "id": "lib-05", "type": "kb", "question": "图书馆晚上几点关门？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["22"] },
+    { "id": "lib-06", "type": "kb", "question": "想借的书被别人借走了怎么办？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["预约"] },
+    { "id": "lib-07", "type": "kb", "question": "珍藏版图书可以借多久？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["15"] },
+    { "id": "course-01", "type": "kb", "question": "一学期最多能修多少学分？", "expected_doc": "选课与课表指南", "expected_keywords": ["28"] },
+    { "id": "course-02", "type": "kb", "question": "补退选之后退课会有记录吗？", "expected_doc": "选课与课表指南", "any_keywords": ["W", "放弃", "不计入绩点"] },
+    { "id": "course-03", "type": "kb", "question": "错过选课时间还能补选吗？", "expected_doc": "选课与课表指南", "any_keywords": ["下一学期", "教务处", "书面申请"] },
+    { "id": "course-04", "type": "kb", "question": "选的课人数满了怎么办？", "expected_doc": "选课与课表指南", "expected_keywords": ["候补"] },
+    { "id": "course-05", "type": "kb", "question": "在哪里可以查到我的课表？", "expected_doc": "选课与课表指南", "any_keywords": ["教务系统", "App"], "accept_tool": "course_query" },
+    { "id": "course-06", "type": "kb", "question": "没修过先修课能直接选后面的课吗？", "expected_doc": "选课与课表指南", "expected_keywords": ["先修"] },
+    { "id": "tool-01", "type": "tool", "question": "我借的书什么时候到期？", "expected_tool": "library_query" },
+    { "id": "tool-02", "type": "tool", "question": "我现在有几本书没还？", "expected_tool": "library_query" },
+    { "id": "tool-03", "type": "tool", "question": "我周三有什么课？", "expected_tool": "course_query" },
+    { "id": "tool-04", "type": "tool", "question": "这周我的课表是怎么排的？", "expected_tool": "course_query" },
+    { "id": "neg-01", "type": "negative", "question": "公司的报到制度是什么？", "forbidden_tools": ["library_query", "course_query"] },
+    { "id": "neg-02", "type": "negative", "question": "学校食堂几点开门？", "forbidden_tools": ["library_query", "course_query"] },
+    { "id": "neg-03", "type": "negative", "question": "给我讲个笑话", "forbidden_tools": ["library_query", "course_query"] }
+  ]
+}

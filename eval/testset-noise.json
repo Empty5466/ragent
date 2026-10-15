@@ -1,0 +1,16 @@
+{
+  "version": "campus-eval-noise-v1",
+  "description": "噪音评测集：错别字/口语噪音/黑话缩写，测试查询归一化与容错检索能力",
+  "cases": [
+    { "id": "noise-01", "type": "kb", "question": "书没看完怎么续接？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["续借"] },
+    { "id": "noise-02", "type": "kb", "question": "那个书最多借多久来着", "expected_doc": "图书馆借阅规则", "expected_keywords": ["30"] },
+    { "id": "noise-03", "type": "kb", "question": "校园卡丢了怎么补办啊急", "expected_doc": "校园卡服务", "expected_keywords": ["20"] },
+    { "id": "noise-04", "type": "kb", "question": "宿社几点关门啊", "expected_doc": "宿舍管理", "expected_keywords": ["23"] },
+    { "id": "noise-05", "type": "kb", "question": "挂科了咋整", "expected_doc": "考试与成绩", "expected_keywords": ["补考"] },
+    { "id": "noise-06", "type": "kb", "question": "国酱学金多少钱", "expected_doc": "奖助学金评定", "expected_keywords": ["8000"] },
+    { "id": "noise-07", "type": "kb", "question": "宿舍能用锅吗", "expected_doc": "宿舍管理", "expected_keywords": ["大功率"] },
+    { "id": "noise-08", "type": "kb", "question": "饭卡咋充钱", "expected_doc": "校园卡服务", "expected_keywords": ["充值"] },
+    { "id": "noise-09", "type": "kb", "question": "体测不过能拿毕业证吗", "expected_doc": "考试与成绩", "any_keywords": [] },
+    { "id": "noise-10", "type": "kb", "question": "寝室门禁时间", "expected_doc": "宿舍管理", "expected_keywords": ["23"] }
+  ]
+}

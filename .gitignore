@@ -4,6 +4,11 @@ temp
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### 本地评测产物与个人文档 ###
+eval/report-*.json
+eval/retrieval-report-*.json
+简历-*.md
+
 ### STS ###
 .apt_generated
 .classpath

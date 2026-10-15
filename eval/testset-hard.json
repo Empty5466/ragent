@@ -1,0 +1,19 @@
+{
+  "version": "campus-eval-hard-v1",
+  "description": "对抗评测集：与知识库文档措辞刻意不同的换说法问题，测试查询改写与检索的泛化能力",
+  "cases": [
+    { "id": "hard-01", "type": "kb", "question": "从图书馆借的书最多能拿多久？", "expected_doc": "图书馆借阅规则", "expected_keywords": ["30"] },
+    { "id": "hard-02", "type": "kb", "question": "书逾期了会有什么后果啊", "expected_doc": "图书馆借阅规则", "expected_keywords": ["停借"] },
+    { "id": "hard-03", "type": "kb", "question": "借的书超过两个星期没还会怎么样", "expected_doc": "图书馆借阅规则", "expected_keywords": ["黑名单"] },
+    { "id": "hard-04", "type": "kb", "question": "我想借的书都被人借光了，有没有办法等别人还了通知我", "expected_doc": "图书馆借阅规则", "expected_keywords": ["预约"] },
+    { "id": "hard-05", "type": "kb", "question": "这学期选的课学分太多了会不会被拦", "expected_doc": "选课与课表指南", "expected_keywords": ["28"] },
+    { "id": "hard-06", "type": "kb", "question": "挂科了还有救吗", "expected_doc": "考试与成绩", "expected_keywords": ["补考"] },
+    { "id": "hard-07", "type": "kb", "question": "饭卡不见了去哪里补", "expected_doc": "校园卡服务", "expected_keywords": ["20"] },
+    { "id": "hard-08", "type": "kb", "question": "宿舍晚上几点锁门", "expected_doc": "宿舍管理", "expected_keywords": ["23"] },
+    { "id": "hard-09", "type": "kb", "question": "在宿舍用热水壶煮面算违规吗", "expected_doc": "宿舍管理", "expected_keywords": ["大功率"] },
+    { "id": "hard-10", "type": "kb", "question": "国奖一年能拿多少钱", "expected_doc": "奖助学金评定", "expected_keywords": ["8000"] },
+    { "id": "hard-11", "type": "kb", "question": "家里经济困难有什么钱可以申请", "expected_doc": "奖助学金评定", "expected_keywords": ["助学金"] },
+    { "id": "hard-12", "type": "kb", "question": "生病了参加不了期末考试怎么办", "expected_doc": "考试与成绩", "expected_keywords": ["缓考"] },
+    { "id": "hard-13", "type": "kb", "question": "怎么查这个月饭卡刷了多少钱", "expected_doc": "校园卡服务", "expected_keywords": ["消费"] }
+  ]
+}
